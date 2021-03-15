@@ -44,7 +44,7 @@ LPWSTR getToken() {
 	}
 	if (retVal == NULL) {
 		retVal = GlobalAlloc(GMEM_FIXED, 20);
-		retVal = L"FAILED";
+		StringCchCopyW(retVal, 20, L"FAILED");
 	}
 	
 	GlobalFree(discordLoc);
